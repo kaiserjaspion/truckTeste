@@ -10,12 +10,12 @@ namespace Teste.Volvo.Gerenciamento.Models
     public class BaseClass
     {
         [Column("IsActive"), Required]
-        public bool IsActive { get; set; } = true;
+        public virtual bool IsActive { get; set; } = true;
         [Column("DtCreated"), Required]
-        public DateTime Created { get; set; } = DateTime.Now;
+        public virtual DateTime Created { get; set; } = DateTime.Now;
         [Column("DtChange"), Required]
-        public DateTime Change { get; set; } = DateTime.Now;
+        public virtual DateTime Change { get; set; } = DateTime.Now;
         [Column("DsChangedBy"), Required]
-        public string ChangedBy { get; set; }
+        public virtual string ChangedBy { get; set; }
     }
 }

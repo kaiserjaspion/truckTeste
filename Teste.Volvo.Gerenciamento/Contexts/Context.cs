@@ -5,13 +5,16 @@ namespace Teste.Volvo.Gerenciamento.Contexts
 {
     public class Context : DbContext
     {
+        public Context() 
+        {
 
+        }
         public Context(DbContextOptions<Context> options) : base(options)
         {
 
         }
 
-        public DbSet<Truck> Truck { get; set; }
+        public virtual DbSet<Truck> Trucks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

@@ -12,6 +12,8 @@ namespace Teste.Volvo.Gerenciamento.Repositories
     {
         public readonly Context _context;
 
+
+
         public TruckRepository(Context context)
         {
             _context = context;
@@ -21,7 +23,7 @@ namespace Teste.Volvo.Gerenciamento.Repositories
         {
             try
             {
-                return await _context.Truck
+                return await _context.Trucks
                     .Where(x => x.IsActive)
                     .ToListAsync();
 
@@ -64,7 +66,7 @@ namespace Teste.Volvo.Gerenciamento.Repositories
         {
             try
             {
-                var truck = await _context.Truck
+                var truck = await _context.Trucks
                     .Where(x => x.IsActive && x.Id == Id)
                     .FirstAsync();
 

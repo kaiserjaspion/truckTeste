@@ -11,13 +11,13 @@ namespace Teste.Volvo.Gerenciamento.Models
     public class Truck: BaseClass
     {
         [Column("Id"),Key,DatabaseGenerated(DatabaseGeneratedOption.Identity),Required]
-        public Guid? Id { get; set; }
+        public virtual Guid Id { get; set; }
         [Column("Model"), Required]
         [StringLength(2)]
-        public string Model { get; set; }
+        public virtual string Model { get; set; }
         [Column("ManufactureYear"), Required]
-        public DateTime ManufactureYear { get; set; }
+        public virtual DateTime ManufactureYear { get; set; }
         [Column("ModelYear"), Required]
-        public DateTime ModelYear { get; set; }
+        public virtual DateTime ModelYear { get; set; }
     }
 }
